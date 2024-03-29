@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    classSuffix: '',    
+},
   components: true,
 
   css: [

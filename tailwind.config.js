@@ -6,6 +6,7 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
     },
