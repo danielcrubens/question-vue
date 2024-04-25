@@ -10,10 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.15.2",
+    "lucide-vue-next": "^0.372.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^3.11.1",
+    "nuxt-swiper": "^1.2.2",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.3.3",

@@ -1,15 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
     '@nuxtjs/color-mode',
+/*     "@nuxt/ui" */
   ],
   colorMode: {
     classSuffix: '',    
 },
-  components: true,
+  components:true,
 
   css: [
     'normalize.css/normalize.css',
