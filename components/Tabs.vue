@@ -22,7 +22,6 @@ import 'swiper/css';
 import { MoveLeft } from 'lucide-vue-next';
 import { MoveRight } from 'lucide-vue-next';
 import Fundamentals from './Fundamentals.vue';
-import Tab2Content from './Tab2Content.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 const activeTab = ref('Fundamentos');
 const activeComponent = ref(Fundamentals);
@@ -31,14 +30,14 @@ const tabs = ['Fundamentos', 'Data Binding', 'Componentes', 'Eventos', 'Diretiva
 
 const components = {
   Fundamentos: Fundamentals,
-  'Data Binding': Tab2Content,
-  Componentes: Tab2Content,
-  Eventos: Tab2Content,
-  Diretivas: Tab2Content,
-  'Gerenciamento de estado': Tab2Content,
-  Roteamento: Tab2Content,
-  Mixins: Tab2Content,
-  Transitions: Tab2Content,
+  'Data Binding': Fundamentals,
+  Componentes: Fundamentals,
+  Eventos: Fundamentals,
+  Diretivas: Fundamentals,
+  'Gerenciamento de estado': Fundamentals,
+  Roteamento: Fundamentals,
+  Mixins: Fundamentals,
+  Transitions: Fundamentals,
 };
 function switchTab(tabName) {
   activeTab.value = tabName;
