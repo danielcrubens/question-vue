@@ -8,7 +8,6 @@
         </div>
       </div>
         <div v-if="tab.expanded" class="py-2 text-white">
-          <!-- <p class="text-base"> {{ tab.content }}</p> -->
           <p class="text-base" v-html="tab.content"></p>
         </div>
       </div>
