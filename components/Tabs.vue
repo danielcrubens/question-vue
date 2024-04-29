@@ -22,6 +22,7 @@ import 'swiper/css';
 import { MoveLeft } from 'lucide-vue-next';
 import { MoveRight } from 'lucide-vue-next';
 import Fundamentals from './Fundamentals.vue';
+import DataBinding from './DataBinding.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 const activeTab = ref('Fundamentos');
 const activeComponent = ref(Fundamentals);
@@ -30,7 +31,7 @@ const tabs = ['Fundamentos', 'Data Binding', 'Componentes', 'Eventos', 'Diretiva
 
 const components = {
   Fundamentos: Fundamentals,
-  'Data Binding': Fundamentals,
+  'Data Binding': DataBinding,
   Componentes: Fundamentals,
   Eventos: Fundamentals,
   Diretivas: Fundamentals,

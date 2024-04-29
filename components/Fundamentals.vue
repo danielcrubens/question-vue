@@ -1,23 +1,12 @@
 <template>
   <div class="mt-12">
-    <div v-for="(tab, index) in tabs" :key="index" class="px-5 py-2 mb-4 border border-slate-400 rounded">
-      <div @click="toggleAccordion(index)" class="flex justify-between items-center cursor-pointer">
-        <h2 class="font-semibold text-white text-lg ">{{ tab.title }}</h2>
-        <div>
-          <AccordionIcon  :expanded="tab.expanded" />
-        </div>
-      </div>
-        <div v-if="tab.expanded" class="py-2 text-white">
-          <p class="text-base" v-html="tab.content"></p>
-        </div>
-      </div>
-    </div>
+    <AccordionItem v-for="(tab, index) in tabs" :key="index" :title="tab.title" :content="tab.content" :expanded="tab.expanded" :toggleAccordion="() => toggleAccordion(index)" />
+  </div>
 </template>
 
 <script setup>
-
 import { ref } from 'vue';
-import AccordionIcon from './icons/AccordionIcon.vue';
+import AccordionItem from './Accordion/AccordionItem.vue';
 
 const tabs = ref([
   { title: 'O que é Vue', content: 'Vue.js é uma estrutura JavaScript progressiva usada principalmente para construir interfaces de usuário e aplicativos de página única. É conhecido por sua adaptabilidade, tamanho de arquivo pequeno e curva de aprendizado progressiva. ', expanded: false },
@@ -30,12 +19,7 @@ const tabs = ref([
 
 const toggleAccordion = (index) => {
   tabs.value.forEach((tab, i) => {
-    if (i !== index) {
-      tab.expanded = false;
-    }
+    tab.expanded = i === index ? !tab.expanded : false;
   });
-  tabs.value[index].expanded = !tabs.value[index].expanded;
 };
 </script>
-
-
