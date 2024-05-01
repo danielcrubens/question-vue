@@ -1,7 +1,7 @@
 <template>
   <div class="px-5 py-2 mb-4 border border-white/40 rounded">
     <div @click="toggle" class="flex justify-between items-center cursor-pointer">
-      <h2 class="font-semibold text-white text-lg">{{ title }}</h2>
+      <h2 class="font-semibold text-white md:text-lg">{{ title }}</h2>
       <div>
         <AccordionIcon :expanded="expanded" />
       </div>
