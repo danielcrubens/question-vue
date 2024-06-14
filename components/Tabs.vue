@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav class="flex justify-center items-center gap-6 pt-14 mx-auto relative  px-16" aria-label="Tabs">
-      <swiper :space-between="20" @swiper="onSwiper" :breakpoints="breakpoints">
+      <swiper class="w-full" :space-between="20" @swiper="onSwiper" :breakpoints="breakpoints">
         <swiper-slide v-for="tab in tabs" :key="tab"
-          class="shrink-0 rounded-lg p-2 text-md w-3 text-center bg-white font-medium text-gray-700 hover:brightness-95 hover:text-gray-700 cursor-pointer"
+          class=" shrink-0 rounded-lg p-2 text-md text-center bg-white font-medium text-gray-700 hover:brightness-95 hover:text-gray-700 cursor-pointer"
           :class="{ 'bg-gradient-to-r from-emerald-400 to-emerald-500 text-white hover:text-white': activeTab === tab }"
           @click="switchTab(tab)">
           {{ tab }}
